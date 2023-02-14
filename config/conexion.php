@@ -1,5 +1,5 @@
 <?
 define('HOST', 'localhost');
-define('USER', 'daniel');
-define('PASS', 'daniel');
+define('USER', 'root');
+define('PASS', 'root');
 define('BBDD', 'ARDUINO_USERS');
