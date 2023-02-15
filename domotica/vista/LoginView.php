@@ -5,7 +5,7 @@ if (isset($_SESSION['error'])) {
 }
 ?>
 
-<form action="./index.php" method="post">
+<form action="./index.php" id="login" method="post">
     <input type="text" name="user" id="user" placeholder="Usuario" class="text">
     <input type="password" name="pass" id="pass" placeholder="Contraseña" class="text">
     <input type="submit" value="Enviar" name="enviar" id="pass">
