@@ -4,10 +4,9 @@ if (isset($_SESSION['error'])) {
     unset($_SESSION['error']);
 }
 ?>
+
 <form action="./index.php" method="post">
-    <label for="user">Usuario</label>
-    <input type="text" name="user" id="user">
-    <label for="pass">Contraseña</label>
-    <input type="password" name="pass" id="pass">
-    <input type="submit" value="Enviar" name="enviar">
+    <input type="text" name="user" id="user" placeholder="Usuario" class="text">
+    <input type="password" name="pass" id="pass" placeholder="Contraseña" class="text">
+    <input type="submit" value="Enviar" name="enviar" id="pass">
 </form>
