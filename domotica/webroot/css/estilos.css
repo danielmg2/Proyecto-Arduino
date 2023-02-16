@@ -23,6 +23,7 @@ form#login{
 .text:hover{
     border-color:#E7D143 ;
 }
+
 input[type=submit]#enviar{
     width: 30%;
     background-color: #E7D143;
@@ -42,7 +43,8 @@ header{
     border-bottom: #AC6238 1px solid;
     justify-content: space-between;
     border-bottom: #AC6238 1px solid;
-    justify-content: space-between;
+    justify-content: space-between;    flex-wrap: wrap;
+    
 }
 header img{
     margin: 10px;
@@ -144,12 +146,15 @@ input[type=submit]#logout{
 
 @media screen and (max-width: 1000px){
     header img{
-        margin-left: 10px;     
-    header img{
-        margin-left: 10px;     
+        margin-left: 10px;        
     }
  
- 
+}
+
+@media screen and (max-width: 1000px){
+    header{
+        flex-direction: column;
+    }
     form#login{
         width: 50%;
         padding: 50px;
@@ -182,4 +187,7 @@ input[type=submit]#logout{
     }
 }
 
-
+#logout{
+    position: relative;
+    left:50%;
+}
