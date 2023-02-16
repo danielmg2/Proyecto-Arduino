@@ -19,7 +19,7 @@
 <?php 
     try{
     
-        $conexion = new PDO('mysql:host='. HOST. ';dbname=domotica'. USER, PASS);
+        $conexion = new PDO('mysql:host='. HOST. ';dbname='. USER, PASS);
     }catch(PDOException $e){
         crearBase();
         

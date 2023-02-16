@@ -1,19 +1,19 @@
 <?
 
 class Usuario{
-    private $id;
+    private $id_usuario;
     private $nombre;
-    private $password;
-    private $idRol;
+    private $pass;
+    private $rol;
     
     
 
-    public function __construct($id,$nombre,$password,$idRol)
+    public function __construct($id_usuario,$nombre,$pass,$rol)
     {
-        $this->id = $id;
+        $this->id_usuario = $id_usuario;
         $this->nombre = $nombre;
-        $this->password = $password;
-        $this->idRol = $idRol;
+        $this->pass = $pass;
+        $this->rol = $rol;
         
     }
     
