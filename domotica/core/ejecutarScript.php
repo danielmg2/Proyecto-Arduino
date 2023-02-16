@@ -1,5 +1,27 @@
 <?php
 
+function compruebaBase(){
+    try{
+        
+        $conexion = new PDO('mysql:host='.HOST.';dbname=information_schema', USER, PASS);
+        $sql = "select SCHEMA_NAME FROM SCHEMATA WHERE SCHEMA_NAME = 'domotica';";
+        $preparada = $conexion->prepare($sql);
+        $preparada->execute();
+        $preparada->bindColumn(1,$name);
+
+        while($row =$preparada->fetch(PDO::FETCH_BOUND)){
+            return $name;
+        }
+    
+    }catch(Exception $ex){
+        echo "Error:";
+        print_r($ex);
+    }finally{
+        unset($conexion);
+    }
+}
+
+
 
 
 
