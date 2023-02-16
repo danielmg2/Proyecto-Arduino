@@ -18,10 +18,11 @@
 
 <?php 
     try{
-    
-        $conexion = new PDO('mysql:host='. HOST. ';dbname='. USER, PASS);
+        
+        if(compruebaBase()!="domotica"){
+            crearBase();
+        }
     }catch(PDOException $e){
-        crearBase();
         
     }?>
 
