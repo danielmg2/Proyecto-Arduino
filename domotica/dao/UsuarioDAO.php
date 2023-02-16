@@ -3,12 +3,12 @@
 
 class UsuarioDAO extends FactoryBD implements DAO{
     public static function findAll(){
-        $sql = 'select * from USUARIOS;';
+        $sql = 'select * from usuarios;';
         $datos = array();
         $devuelve = parent::ejecuta($sql,$datos);
         $arrayUsuarios = array();
         while($obj = $devuelve->fetchObject()){         
-            $usuario = new Usuario($obj->id,$obj->nombre, $obj->password,$obj->idRol);
+            $usuario = new Usuario($obj->id,$obj->nombre, $obj->pass,$obj->idRol);
             array_push($arrayUsuarios,$usuario);
         }
         return $arrayUsuarios;
@@ -16,12 +16,12 @@ class UsuarioDAO extends FactoryBD implements DAO{
 
 
     public static function findById($id){
-        $sql = 'select * from USUARIOS where nombre = ?;';
+        $sql = 'select * from usuarios where nombre = ?;';
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchObject();
         if($obj){
-            $usuario = new Usuario($obj->id,$obj->nombre, $obj->password, $obj->idRol);
+            $usuario = new Usuario($obj->id,$obj->nombre, $obj->pass, $obj->idRol);
             return $usuario;
         }  
         return null;
@@ -29,7 +29,7 @@ class UsuarioDAO extends FactoryBD implements DAO{
 
 
     public static function delete($nombre){
-        $sql = 'delete from USUARIOS where usuario = ?;';
+        $sql = 'delete from usuarios where usuario = ?;';
         $datos = array($nombre);
         $devuelve = parent::ejecuta($sql,$datos);
         if($devuelve->rowCount() == 0){
@@ -42,7 +42,7 @@ class UsuarioDAO extends FactoryBD implements DAO{
 
     //Insertar nuevo usuario
     public static function insert($objeto){
-        $sql = 'insert into USUARIOS values(?,?,?,?)';
+        $sql = 'insert into usuarios values(?,?,?,?)';
         $objeto = (array)$objeto;
         $datos = array();
         foreach($objeto as $att){
@@ -57,8 +57,8 @@ class UsuarioDAO extends FactoryBD implements DAO{
 
     //Actualizar nombre y contraseña
     public static function update($objeto){
-        $sql = 'update USUARIOS set nombre = ?, password = ?, where usuario = ? ';
-        $datos = array($objeto->usuario,$objeto->contraseña,$objeto->email,$objeto->fecha,$_SESSION['nombre']);
+        $sql = 'update usuarios set nombre = ?, pass = ?, where usuario = ? ';
+        $datos = array($objeto->usuario,$objeto->pass,$objeto->email,$objeto->fecha,$_SESSION['nombre']);
         $devuelve = parent::ejecuta($sql,$datos); 
         if($devuelve->rowCount() == 0){
             return false;
@@ -68,13 +68,13 @@ class UsuarioDAO extends FactoryBD implements DAO{
 
     public static function valida($user,$pass){
         //FALTA SHA256
-        $sql = 'select * from USUARIOS where nombre = ? and password = ?;';
+        $sql = 'select * from usuarios where nombre = ? and pass = ?;';
         $passh = hash('sha256',$pass);
         $datos = array($user,$passh);
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchObject();
         if($obj){
-             $usuario = new Usuario($obj->id, $obj->nombre, $obj->password,$obj->idRol);
+             $usuario = new Usuario($obj->id_usuario, $obj->nombre, $obj->pass,$obj->rol);
             return $usuario;
         }else{
             return null;
