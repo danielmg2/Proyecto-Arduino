@@ -23,31 +23,31 @@ form#login{
 .text:hover{
     border-color:#E7D143 ;
 }
-input[type=submit]#pass{
+input[type=submit]#enviar{
     width: 30%;
     background-color: #E7D143;
     border-radius: 5px;
     border: none;
     padding: 3px;
 }
-input[type=submit]#pass:hover{
+input[type=submit]#enviar:hover{
     background-color:#AC6238 ;
 }
 header{
     display: flex;
     align-items: center;
     /* background-color:#E7D143; */
-
+    flex-wrap: wrap;
+    
 }
 header img{
     margin: 10px;
     margin-left: 20px;
+    
 }
 h1{
-    position: relative;
     text-transform: uppercase;
-    text-align: center;
-    left: 25%;
+    margin: auto;
     font-family: 'Mulish', sans-serif;
 }
 
@@ -55,3 +55,21 @@ h1{
     position: relative;
     left:50%;
 }
+
+@media screen and (max-width: 1000px){
+    header{
+        flex-direction: column;
+    }
+    form#login{
+        width: 50%;
+        padding: 50px;
+    }
+    .text{
+        width: 80%;
+    }
+    input[type=submit]#enviar{
+        padding: 2px;
+        width: 40%;
+    }
+}
+
