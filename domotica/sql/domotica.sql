@@ -5,28 +5,27 @@ use domotica;
 CREATE TABLE usuarios(
     id_usuario int primary key auto_increment,
     nombre varchar(30) not null,
-    pass char(50) not null,
+    pass varchar(100) not null,
     rol varchar(10) not null
 );
-
-
-
-
-CREATE TABLE accede(
-    id int primary key auto_increment,
-    id_arduino int,
-    id_usuario int
-
-    CONSTRAINT FOREIGN KEY fk_arduino_accede (id_arduino) REFERENCES arduino(id_arduino),
-    CONSTRAINT FOREIGN KEY fk_usuario_accede (id_usuario) REFERENCES usuarios(id_usuario)
-);
-
 
 CREATE TABLE arduino(
     id_arduino int primary key auto_increment,
     nombre varchar(30),
     clase varchar(30)
 );
+
+
+
+CREATE TABLE accede(
+    id int primary key auto_increment,
+    id_arduino int,
+    id_usuario int,
+    CONSTRAINT FOREIGN KEY fk_arduino_accede (id_arduino) REFERENCES arduino(id_arduino),
+    CONSTRAINT FOREIGN KEY fk_usuario_accede (id_usuario) REFERENCES usuarios(id_usuario)
+);
+
+
 
 
 
