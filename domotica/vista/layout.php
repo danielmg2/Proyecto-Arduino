@@ -18,9 +18,11 @@
 
 <?php 
     try{
-        $conexion = new PDO('mysql:host='. HOST. ';dbname=' . BBDD, USER, PASS);
+        echo "conexion";
+        $conexion = new PDO('mysql:host='. HOST. ';dbname=domotica'. USER, PASS);
     }catch(PDOException $e){
-        require './ejecuatarScript.php';
+        crearBase();
+        
     }?>
 
 

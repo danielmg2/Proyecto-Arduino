@@ -1,12 +1,12 @@
 <?php
-require('./conexionBD.php');
+
 
 
 
 function crearBase(){
     try{
         $conexion = mysqli_connect(HOST,USER,PASS);
-        $script = file_get_contents('./Peliculas.sql');
+        $script = file_get_contents('./sql/domotica.sql');
         mysqli_multi_query($conexion,$script);
         
     
