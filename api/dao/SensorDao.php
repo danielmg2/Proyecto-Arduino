@@ -3,25 +3,25 @@
 class ActuadorDao extends FactoryBD implements DAO{
     
     public static function findAll(){
-        $sql = 'select * from actuador;';
+        $sql = 'select * from sensor;';
         $datos = array();
         $devuelve = parent::ejecuta($sql,$datos);
-        $arrayActuadores= array();
+        $arraySensor= array();
         while($obj = $devuelve->fetchObject()){         
-            $actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
-            array_push($arrayActuadores,$actuador); 
+            $sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
+            array_push($arraySensor,$sensor); 
         }
-        return $arrayActuadores;
+        return $arraySensor;
     }
 
     public static function findById($id){
-        $sql = 'select * from actuador where id_actuador = ?;';
+        $sql = 'select * from sensor where id_sensor = ?;';
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchObject();
         if($obj){
-            $actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
-            return $actuador;
+            $sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
+            return $sensor;
         }  
         return null;
     }
@@ -29,7 +29,7 @@ class ActuadorDao extends FactoryBD implements DAO{
     public static function delete($id){}
     
     public static function insert($objeto){
-        $sql = 'insert into actuador values(?,?,?,?,?)';
+        $sql = 'insert into sensor values(?,?,?,?,?.?)';
         $objeto = (array)$objeto;
         $datos = array();
         foreach($objeto as $att){
