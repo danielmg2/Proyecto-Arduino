@@ -1,6 +1,8 @@
 <?
+
 require_once './controlador/ControladorPadre.php';
-require_once './controlador/ControladorDomotica.php';
+require_once './controlador/ControladorActuador.php';
+require_once './controlador/ControladorSensor.php';
 
 require_once './modelo/Actuador.php';
 require_once './modelo/Arduiono.php';
