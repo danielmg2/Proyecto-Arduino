@@ -143,14 +143,17 @@ input[type=submit]#logout{
     box-shadow: none;
    
 }
-
-@media screen and (max-width: 1000px){
-    header img{
-        margin-left: 10px;        
-    }
- 
+input[type=submit]#logout{
+   background-image: url('../iconos/icons8-salida-50.png');
+   background-repeat: no-repeat; 
+   background-position: center;  
+   background-size: 30px;
+    padding: 20px;
+    background-color: #e7d14300;
+    border: none;
+    position: relative;
+    left: 500px;
 }
-
 @media screen and (max-width: 1000px){
     header{
         flex-direction: column;
