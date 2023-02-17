@@ -23,6 +23,7 @@ CREATE TABLE accede(
     CONSTRAINT FOREIGN KEY fk_usuario_accede (id_usuario) REFERENCES usuarios(id_usuario)
 );
 
+
 INSERT INTO usuarios VALUES (null, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'ADM');
 INSERT INTO usuarios VALUES (null, 'user1', '0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90', 'USR');
 INSERT INTO usuarios VALUES (null, 'user2', '530044660947a58cbf6036c0aa2922d9882734e51f7ec22a2640ee9f542ebc82', 'USR');
