@@ -21,17 +21,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <?php
     try {
-
         if (compruebaBase() != "domotica") {
             crearBase();
         }
@@ -41,50 +43,36 @@
 
     <header>
         <a href="./index.php"><img src="./webroot/img/logo.png" alt="logo"></a>
-
         <!--<h1><span class="letra"> D</span>omótica  <span class="letra">C</span>laudio</h1>-->
-
         <?
-
         if (estaValidado()) {
         ?>
-            <form action="./index.php" method="POST">
+            <form action="./index.php" method="POST" id="log">
                 <input type="submit" name="logout" id="logout" value="">
             </form>
         <?
         }
         ?>
     </header>
-    <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light   border-dark">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <form action="./index.php" method="post">
-                        <button type="submit" name="arduino1" class="btn me-2">
-                            <p> Arduino 1 </p>
-                        </button>
-                </li>
-                <li class="nav-item">
-                    <button type="submit" name="arduino2" class="btn me-2">
-                        <p> Arduino 2 </p>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button type="submit" name="arduino3" class="btn me-2">
-                        <p> Arduino 3 </p>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button type="submit" name="arduino4" class="btn me-2">
-                        <p> Arduino 4 </p>
-                    </button>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <form action="./index.php" method="post" id="menu">
+                        <input type="submit" value="Arduino 1" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 2" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 3" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 4" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+
                     </form>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
+                </div>
+            </div>
+        </div>
+    </nav>
     <main>
 
         <?
