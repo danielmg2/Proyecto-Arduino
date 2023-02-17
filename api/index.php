@@ -5,12 +5,14 @@ require_once './controlador/ControladorActuador.php';
 require_once './controlador/ControladorSensor.php';
 
 require_once './modelo/Actuador.php';
-require_once './modelo/Arduiono.php';
+require_once './modelo/Arduino.php';
 require_once './modelo/Sensor.php';
 
-require_once './dao/ActuadorDao.php';
 require_once './dao/DAO.php';
 require_once './dao/FactoryBD.php';
+require_once './dao/ActuadorDao.php';
+require_once './dao/ArduinoDao.php';
+require_once './dao/SensorDao.php';
 
 
 $recurso = ControladorPadre::recurso();

@@ -1,6 +1,6 @@
 <?
 
-class ActuadorDao extends FactoryBD implements DAO{
+class SensorDao extends FactoryBD implements DAO{
     
     public static function findAll(){
         $sql = 'select * from sensor;';
@@ -29,7 +29,7 @@ class ActuadorDao extends FactoryBD implements DAO{
     public static function delete($id){}
     
     public static function insert($objeto){
-        $sql = 'insert into sensor values(?,?,?,?,?.?)';
+        $sql = 'insert into sensor values(?,?,?,?,?,?,?)';
         $objeto = (array)$objeto;
         $datos = array();
         foreach($objeto as $att){

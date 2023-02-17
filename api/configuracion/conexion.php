@@ -1,5 +1,5 @@
 <?
-define('HOST','192.168.2.214');
-define('USER','itziar');
-define('PASS','itziar');
-define('BBDD','domotica');
+define('HOST','192.168.2.209');
+define('USER','lore1');
+define('PASS','lore1');
+define('BBDD','api');
