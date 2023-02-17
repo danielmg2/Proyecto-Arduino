@@ -9,15 +9,16 @@ class Sensor{
     private $luminosidad;
     private $humedad;
 
-    public function __construct($id_sensor,$id_arduino, $fecha,  $temperatura, $humedad, $luminosidad,$personas)
+    public function __construct($id_sensor,$id_arduino,$personas, $fecha,  $temperatura,$luminosidad,$humedad)
     {
         $this->id_sensor=$id_sensor;
         $this->id_arduino=$id_arduino;
+        $this->personas=$personas;
         $this->fecha=$fecha;
         $this->temperatura=$temperatura;
-        $this->humedad=$humedad;
         $this->luminosidad=$luminosidad;
-        $this->personas=$personas;
+        $this->humedad=$humedad;
+
     }
     public function __get($get){
         if(property_exists(__CLASS__,$get))
