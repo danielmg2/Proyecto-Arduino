@@ -15,8 +15,6 @@ CREATE TABLE arduino(
     clase varchar(30)
 );
 
-
-
 CREATE TABLE accede(
     id int primary key auto_increment,
     id_arduino int,
@@ -26,17 +24,11 @@ CREATE TABLE accede(
 );
 
 
-
-
-
-
 INSERT INTO usuarios VALUES (null, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'ADM');
 INSERT INTO usuarios VALUES (null, 'user1', '0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90', 'USR');
 INSERT INTO usuarios VALUES (null, 'user2', '530044660947a58cbf6036c0aa2922d9882734e51f7ec22a2640ee9f542ebc82', 'USR');
 INSERT INTO usuarios VALUES (null, 'user3', 'b4e8183bc3773e785982918eefcab56eb390b2582a06812739d97d944830293f', 'USR');
 INSERT INTO usuarios VALUES (null, 'user4', 'a8d372305113b3e05aee426958f363b2a2d32bd57501b6e295e633cca34ec154', 'USR');
-
-
 
 INSERT INTO arduino VALUES (null, 'arduino1','DAM');
 INSERT INTO arduino VALUES (null, 'arduino2','DAW');

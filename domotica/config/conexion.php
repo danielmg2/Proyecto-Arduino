@@ -1,5 +1,6 @@
 <?
 define('HOST', 'localhost');
-define('USER', 'lore1');
-define('PASS', 'lore1');
+define('USER', 'clase');
+define('PASS', 'clase');
+
 define('BBDD', 'domotica');
