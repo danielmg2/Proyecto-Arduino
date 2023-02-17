@@ -36,26 +36,37 @@ input[type=submit]#enviar:hover{
 header{
     display: flex;
     align-items: center;
-    /* background-color:#E7D143; */
+     background-color:#e7d14358;
     flex-wrap: wrap;
     
 }
 header img{
     margin: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
+    width: 50%;
     
 }
-h1{
-    text-transform: uppercase;
+/*h1{
+    
     margin: auto;
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: #AC6238;
+    -webkit-text-stroke: 1px #794223;
+}*/
+.letra{
+    color: #E7D143;
 }
-
-#logout{
+input[type=submit]#logout{
+   background-image: url('../iconos/icons8-salida-50.png');
+   background-repeat: no-repeat; 
+   background-position: center;  
+   background-size: 30px;
+    padding: 20px;
+    background-color: #e7d14300;
+    border: none;
     position: relative;
-    left:50%;
+    left: 500px;
 }
-
 @media screen and (max-width: 1000px){
     header{
         flex-direction: column;
@@ -70,6 +81,17 @@ h1{
     input[type=submit]#enviar{
         padding: 2px;
         width: 40%;
+    }
+    input[type=submit]#enviar{
+     margin: auto;
+    }
+    header img{
+        width: 80%;
+    }
+    input[type=submit]#logout{
+        margin: auto;
+        left: 0;
+        background-size: 25px;
     }
 }
 
