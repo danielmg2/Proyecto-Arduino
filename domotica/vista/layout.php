@@ -51,15 +51,14 @@
         <a href="./index.php"><img src="./webroot/img/logo.png" alt="logo"></a>
         <!--<h1><span class="letra"> D</span>omótica  <span class="letra">C</span>laudio</h1>-->
         <?
-   
-        if(estaValidado()){
-            ?>
-            <form action="./index.php" method="POST" > 
-                <input  type="submit" name="logout" id="logout" value="" >
+        if (estaValidado()) {
+        ?>
+            <form action="./index.php" method="POST" id= "log">
+                <input type="submit" name="logout" id="logout" value="">
             </form>
         <?
         }
-?>
+        ?>
     </header>
 <?php
     if(estaValidado()){
