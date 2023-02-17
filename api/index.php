@@ -1,4 +1,5 @@
 <?
+
 require_once './controlador/ControladorPadre.php';
 require_once './controlador/ControladorActuador.php';
 require_once './controlador/ControladorSensor.php';
