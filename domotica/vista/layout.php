@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domotica en el Claudio</title>
     <link rel="stylesheet" href="./webroot/css/estilos.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<?php 
-    try{
-        
-        if(compruebaBase()!="domotica"){
+    <?php
+    try {
+        if (compruebaBase() != "domotica") {
             crearBase();
         }
-    }catch(PDOException $e){
-        
-    }?>
+    } catch (PDOException $e) {
+    } ?>
 
 
     <header>
         <a href="./index.php"><img src="./webroot/img/logo.png" alt="logo"></a>
-
         <!--<h1><span class="letra"> D</span>omótica  <span class="letra">C</span>laudio</h1>-->
-
         <?
-   
-        if(estaValidado()){
-            ?>
-            <form action="./index.php" method="POST" > 
-                <input  type="submit" name="logout" id="logout" value="" >
+        if (estaValidado()) {
+        ?>
+            <form action="./index.php" method="POST" id= "log">
+                <input type="submit" name="logout" id="logout" value="">
             </form>
-            <?
+        <?
         }
-?>
+        ?>
     </header>
-    <div class="container-fluid">
 
-<nav class="navbar navbar-expand-lg navbar-light   border-dark">
-<ul class="navbar-nav mx-auto">
-    <li class="nav-item">
-        <form action="./index.php" method="post">
-            <button type="submit" name="arduino1" class="btn me-2">
-                <p> Arduino 1 </p>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
+        <!-- <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <form action="./index.php" method="post">
+                    <input type="submit" value="Arduino 1" name="arduino1" class="boton ">
+            </li>
+            <li class="nav-item">
+                    <input type="submit" value="Arduino 2" name="arduino2" class="boton">
+            </li>
+            <li class="nav-item">
+                    <input type="submit" value="Arduino 3" name="arduino3" class="boton">
+            </li>
+            <li class="nav-item">
+                    <input type="submit" value="Arduino 4" name="arduino4" class="boton">
+                </li>
+            </form>
+        </ul> -->
+        <div class="container-fluid">
+            <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-    </li>
-    <li class="nav-item">
-            <button type="submit" name="arduino2" class="btn me-2">
-                <p> Arduino 2 </p>
-            </button>
-    </li>
-    <li class="nav-item">
-            <button type="submit" name="arduino3" class="btn me-2">
-                <p> Arduino 3 </p>
-            </button>
-    </li>
-    <li class="nav-item">
-            <button type="submit" name="arduino4" class="btn me-2">
-                <p> Arduino 4 </p>
-            </button>
-        </form>
-    </li>
-</ul>
-</nav>
-</div>
+            <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <form action="./index.php" method="post" id="menu">
+                        <input type="submit" value="Arduino 1" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 2" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 3" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                        <input type="submit" value="Arduino 4" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
 
-
-
-
-
-
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
     <main>
 
         <?
         require_once $_SESSION['vista'];
         ?>
     </main>
-    
+
 </body>
+
 </html>
