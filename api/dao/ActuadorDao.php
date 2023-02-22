@@ -8,8 +8,8 @@ class ActuadorDao extends FactoryBD implements DAO{
         $devuelve = parent::ejecuta($sql,$datos);
         $arrayActuadores= array();
         while($obj = $devuelve->fetchObject()){         
-            $actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
-            array_push($arrayActuadores,$actuador); 
+            //$actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
+            array_push($arrayActuadores,$obj); 
         }
         return $arrayActuadores;
     }
@@ -20,8 +20,8 @@ class ActuadorDao extends FactoryBD implements DAO{
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchObject();
         if($obj){
-            $actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
-            return $actuador;
+            //$actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
+            return $obj;
         }  
         return null;
     }

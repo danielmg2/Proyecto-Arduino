@@ -71,8 +71,9 @@ class ControladorActuador extends ControladorPadre{
             //2.conciertos y despues id
             //no tenemoms en cuenta los parametros poruqe se busca por id
 
-            $concierto= ActuadorDao::findById($recurso[2]);
-            $data=json_encode($concierto);
+            $actuador= ActuadorDao::findById($recurso[2]);
+            $data=json_encode($actuador);
+            $last_error = json_last_error_msg();
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
