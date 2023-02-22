@@ -8,8 +8,8 @@ class SensorDao extends FactoryBD implements DAO{
         $devuelve = parent::ejecuta($sql,$datos);
         $arraySensor= array();
         while($obj = $devuelve->fetchObject()){         
-            $sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
-            array_push($arraySensor,$sensor); 
+            //$sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
+            array_push($arraySensor,$obj); 
         }
         return $arraySensor;
     }
@@ -20,8 +20,8 @@ class SensorDao extends FactoryBD implements DAO{
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchObject();
         if($obj){
-            $sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
-            return $sensor;
+            //$sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
+            return $obj;
         }  
         return null;
     }
