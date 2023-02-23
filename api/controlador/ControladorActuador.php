@@ -38,9 +38,23 @@ class ControladorActuador extends ControladorPadre{
             
             //     else{
             //     if(isset($_GET['fecha']) && isset($_GET['ordenF']) && count($_GET)==2){
-                    
+            }else{
 
-            //     }elseif(isset($_GET['fecha']) && count($_GET)==1){
+                 if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
+                    
+                        $lista = ActuadorDao::findByDays($_GET['fecha1'],$_GET['fecha2']);
+                        $datos = json_encode($lista);
+                        self::respuesta(
+                            $datos,
+                            array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                        );
+
+                 }
+
+                 
+                }
+
+                 //elseif(isset($_GET['fecha']) && count($_GET)==1){
 
             //         $concierto = ConciertoDAO::findByFecha($_GET['fecha']);
 
