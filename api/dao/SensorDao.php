@@ -1,7 +1,10 @@
 <?
 
 class SensorDao extends FactoryBD implements DAO{
-    
+
+    public static function delete($id){}
+    public static function update($objeto){}
+
     public static function findAll(){
         $sql = 'select * from sensor;';
         $datos = array();
@@ -25,8 +28,6 @@ class SensorDao extends FactoryBD implements DAO{
         }  
         return null;
     }
-
-    public static function delete($id){}
     
     public static function insert($objeto){
         $sql = 'insert into sensor values(?,?,?,?,?,?,?)';
@@ -41,5 +42,17 @@ class SensorDao extends FactoryBD implements DAO{
         }
         return true;
     }
-    public static function update($objeto){}
+
+    public static function findByDays($fecha1,$fecha2){
+
+        $sql=" select * from sensor where fecha between ? and ?;";
+        $datos = array($fecha1,$fecha2);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arrayActuadores= array();
+        while($obj = $devuelve->fetchObject()){         
+           
+            array_push($arrayActuadores,$obj); 
+        }
+        return $arrayActuadores;
+    }
 }
