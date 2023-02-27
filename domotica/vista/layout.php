@@ -8,10 +8,17 @@
     <title>Domotica en el Claudio</title>
     <link rel="stylesheet" href="./webroot/css/estilos.css">
 
+    <!-- BOOTSTRAP -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <!-- FONTS -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
@@ -28,6 +35,7 @@
     <?php
     try {
         if (compruebaBase() != "domotica") {
+
             crearBase();
         }
     } catch (PDOException $e) {
@@ -38,9 +46,11 @@
         <a href="./index.php"><img src="./webroot/img/logo.png" alt="logo"></a>
         <!--<h1><span class="letra"> D</span>omótica  <span class="letra">C</span>laudio</h1>-->
         <?
+
         if (estaValidado()) {
         ?>
             <form action="./index.php" method="POST" id= "log">
+
                 <input type="submit" name="logout" id="logout" value="">
             </form>
         <?
@@ -49,22 +59,6 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
-        <!-- <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <form action="./index.php" method="post">
-                    <input type="submit" value="Arduino 1" name="arduino1" class="boton ">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 2" name="arduino2" class="boton">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 3" name="arduino3" class="boton">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 4" name="arduino4" class="boton">
-                </li>
-            </form>
-        </ul> -->
         <div class="container-fluid">
             <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -89,6 +83,9 @@
         ?>
     </main>
 
+<!-- CHARTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="./js/app.js"></script>
 </body>
 
 </html>

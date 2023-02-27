@@ -21,4 +21,3 @@ if(!isset($_SESSION['pagina'])){
     require_once $_SESSION['controlador'];
 }
 require_once('./vista/layout.php');
-?>
