@@ -115,5 +115,6 @@
 <!-- CHARTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script src="./js/app.js"></script>
+</body>
 
 </html>
