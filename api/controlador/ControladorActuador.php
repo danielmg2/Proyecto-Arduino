@@ -28,16 +28,20 @@ class ControladorActuador extends ControladorPadre{
             if(!$parametros){
                 //Listar sin parametros
                 $lista = ActuadorDao::findAll();
+                $lista = ActuadorDao::findAll();
                 //print_r($lista);//tengo la lista en array, ahora debo mandar como JSON el recurso al cliente
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
+
+
             }
             
             //     else{
             //     if(isset($_GET['fecha']) && isset($_GET['ordenF']) && count($_GET)==2){
+
             }else{
 
                  if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
