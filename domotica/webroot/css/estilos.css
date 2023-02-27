@@ -97,6 +97,18 @@ input[type=submit]#logout{
    
 }
 
+#pie{
+    background-color:#F7EFBE;
+    border-top: 1px solid #AC6238;
+}
+#enlaceFooter{
+    text-decoration: none;
+    color: #AC6238;
+    font-weight: 500;
+}
+#enlaceFooter:hover{
+    color:orange !important;
+}
 @media screen and (max-width: 1000px){
     header img{
         margin-left: 10px;     

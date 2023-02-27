@@ -47,48 +47,56 @@
         }
         ?>
     </header>
+<?php
+    if(estaValidado()){
+?>
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
-        <!-- <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <form action="./index.php" method="post">
-                    <input type="submit" value="Arduino 1" name="arduino1" class="boton ">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 2" name="arduino2" class="boton">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 3" name="arduino3" class="boton">
-            </li>
-            <li class="nav-item">
-                    <input type="submit" value="Arduino 4" name="arduino4" class="boton">
-                </li>
-            </form>
-        </ul> -->
-        <div class="container-fluid">
-            <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNavAltMarkup">
-                <div class="navbar-nav mx-auto">
-                    <form action="./index.php" method="post" id="menu">
-                        <input type="submit" value="Arduino 1" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                        <input type="submit" value="Arduino 2" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                        <input type="submit" value="Arduino 3" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                        <input type="submit" value="Arduino 4" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-
-                    </form>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
+          
+            <div class="container-fluid">
+                <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <form action="./index.php" method="post" id="menu">
+                            <input type="submit" value="Arduino 1" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" value="Arduino 2" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" value="Arduino 3" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" value="Arduino 4" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+    
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+        
+        <?php
+    }
+
+?>
     <main>
 
         <?
         require_once $_SESSION['vista'];
         ?>
     </main>
+    
+    <footer class="text-center mt-5 p-4" id="pie">
 
+    <div  class= "container">
+
+        <div class="row">
+        
+        <div class="col-12 d-flex justify-content-center">
+            © Copyright:&nbsp; &nbsp;
+                <a  href="https://www.claudiomoyano.es/" id="enlaceFooter">   claudiomoyano.es</a>
+            </div>
+    
+        </div>
+    </div>
+
+</footer>
 </body>
 
 </html>
