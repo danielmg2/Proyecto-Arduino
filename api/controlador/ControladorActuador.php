@@ -35,6 +35,13 @@ class ControladorActuador extends ControladorPadre{
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
+
+
+            }
+            
+            //     else{
+            //     if(isset($_GET['fecha']) && isset($_GET['ordenF']) && count($_GET)==2){
+
             }else{
 
                  if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
