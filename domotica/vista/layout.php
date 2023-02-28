@@ -80,7 +80,7 @@
     if(estaValidado()){
 ?>
 
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#e7d14358; width:'100%'; ">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#F7EFBE; width:'100%'; ">
           
             <div class="container-fluid">
                 <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

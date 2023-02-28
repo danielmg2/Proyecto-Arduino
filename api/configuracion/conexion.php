@@ -1,5 +1,5 @@
 <?
-define('HOST','192.168.100.127');
-define('USER','itziar');
-define('PASS','itziar');
+define('HOST','localhost');
+define('USER','clase');
+define('PASS','clase');
 define('BBDD','api');

@@ -39,7 +39,7 @@ input[type=submit]#enviar:hover{
 header{
     display: flex;
     align-items: center;
-     background-color:#e7d14358;
+     background-color:#F7EFBE;
     border-bottom: #AC6238 1px solid;
     justify-content: space-between;
 
