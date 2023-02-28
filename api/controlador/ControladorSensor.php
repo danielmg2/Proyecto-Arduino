@@ -48,48 +48,26 @@ class ControladorSensor extends ControladorPadre{
                 }
             }
             
-            
-            //     else{
-            //     if(isset($_GET['fecha']) && isset($_GET['ordenF']) && count($_GET)==2){
-                    
-
-            //     }elseif(isset($_GET['fecha']) && count($_GET)==1){
-
-            //         $concierto = ConciertoDAO::findByFecha($_GET['fecha']);
-
-            //         $data=json_encode($concierto);
-            //         self::respuesta(
-            //             $data,
-            //             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-            //         );
-            //     }elseif(isset($_GET['ordenF']) && count($_GET)==1){
-            //         //me los pide ordenadors
-            //         if($_GET['ordenF'] != 'ASC' && $_GET['ordenF'] != 'DESC'){
-            //             //responde error si no es ASC o DESC
-            //             self::respuesta('',array('HTTP/1.1 400 El filtro debe ser ASC o DESC'));
-            //         }else{
-            //             $concierto = ConciertoDAO::findOrderByFecha($_GET['ordenF']);
-
-            //             $data=json_encode($concierto);
-            //             self::respuesta(
-            //                 $data,
-            //                 array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-            //             );
-            //         }
-            //     }else{
-            //         self::respuesta('',array('HTTP/1.1 400 No se ha utilizado un filtro'));
-            //     }
-            // }
         }elseif(count(self::recurso())==3){
             //2.conciertos y despues id
             //no tenemoms en cuenta los parametros poruqe se busca por id
+            if($recurso[2]=='personas'){
 
-            $sensor= SensorDao::findById($recurso[2]);
-            $data=json_encode($sensor);
+            }elseif($recurso[2]=='temperatura'){
+
+            }elseif($recurso[2]=='luminosidad'){
+
+            }elseif($recurso[2]=='humedad'){
+
+            }else{
+                $sensor= SensorDao::findById($recurso[2]);
+                $data=json_encode($sensor);
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
+            }
+            
         }
     }
 
@@ -113,17 +91,6 @@ class ControladorSensor extends ControladorPadre{
                 array('Content-Type: application/json', 'HTTP/1.1 400 Error JSON no tiene formato correcto, en envio de datos')
             );
         }
-        
-        // $array=get_object_vars($dato);
-        
 
-        // if(ConciertoDAO::insert($dato)){
-        //     //ha ido todo bien
-        //     self::respuesta(
-        //         '',
-        //         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-        //     );
-        // }
-        // //print_r($dato); 
    }
 }

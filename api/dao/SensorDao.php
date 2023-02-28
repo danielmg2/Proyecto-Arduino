@@ -29,6 +29,18 @@ class SensorDao extends FactoryBD implements DAO{
         return null;
     }
     
+    public static function findByRecurso($recurso){
+        $sql = 'select ? from sensor;';
+        $datos = array($recurso);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $obj = $devuelve->fetchObject();
+        if($obj){
+            //$sensor = new Sensor($obj->id_sensor, $obj->id_arduino,$obj->fecha, $obj->temperatura,$obj->humedad, $obj->luminosidad, $obj->personas);
+            return $obj;
+        }  
+        return null;
+    }
+
     public static function insert($objeto){
         $sql = 'insert into sensor values(?,?,?,?,?,?,?)';
         $objeto = (array)$objeto;
