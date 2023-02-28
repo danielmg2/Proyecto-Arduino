@@ -20,21 +20,21 @@
 
             </div>
 
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="10000">
                 <div class="card d-flex align-items-center">
                     <h2 class="card-title m-3" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;"> Mensual </h2>
                     <canvas class="container h-75 w-75" id="chart2"> </canvas>
                 </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="10000">
                 <div class="card d-flex align-items-center">
                     <h2 class="card-title m-3" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;"> Semanal </h2>
                     <canvas class="container h-75 w-75" id="chart3"> </canvas>
                 </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="10000">
                 <div class="card d-flex align-items-center">
                     <h2 class="card-title m-3" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;"> Diario </h2>
                     <canvas class="container h-75 w-75 " id="chart4"> </canvas>
