@@ -26,25 +26,15 @@ class ControladorActuador extends ControladorPadre{
         if (count($recurso)==2){
             //si solo hay conciertos devuelve dos, el de antes de la barra y el de espues
             if(!$parametros){
-                //Listar sin parametros
+
                 $lista = ActuadorDao::findAll();
-                $lista = ActuadorDao::findAll();
-                //print_r($lista);//tengo la lista en array, ahora debo mandar como JSON el recurso al cliente
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
 
-
-            }
-            
-            //     else{
-            //     if(isset($_GET['fecha']) && isset($_GET['ordenF']) && count($_GET)==2){
-
-            }else{
-
-                 if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
+            }elseif(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
                     
                         $lista = ActuadorDao::findByDays($_GET['fecha1'],$_GET['fecha2']);
                         $datos = json_encode($lista);
@@ -53,41 +43,8 @@ class ControladorActuador extends ControladorPadre{
                             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                         );
 
-                 }
-
-                 
-                }
-
-                 //elseif(isset($_GET['fecha']) && count($_GET)==1){
-
-            //         $concierto = ConciertoDAO::findByFecha($_GET['fecha']);
-
-            //         $data=json_encode($concierto);
-            //         self::respuesta(
-            //             $data,
-            //             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-            //         );
-            //     }elseif(isset($_GET['ordenF']) && count($_GET)==1){
-            //         //me los pide ordenadors
-            //         if($_GET['ordenF'] != 'ASC' && $_GET['ordenF'] != 'DESC'){
-            //             //responde error si no es ASC o DESC
-            //             self::respuesta('',array('HTTP/1.1 400 El filtro debe ser ASC o DESC'));
-            //         }else{
-            //             $concierto = ConciertoDAO::findOrderByFecha($_GET['ordenF']);
-
-            //             $data=json_encode($concierto);
-            //             self::respuesta(
-            //                 $data,
-            //                 array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-            //             );
-            //         }
-            //     }else{
-            //         self::respuesta('',array('HTTP/1.1 400 No se ha utilizado un filtro'));
-            //     }
-            // }
-        }elseif(count(self::recurso())==3){
-            //2.conciertos y despues id
-            //no tenemoms en cuenta los parametros poruqe se busca por id
+            }
+        }elseif(count($recurso)==3){
 
             $actuador= ActuadorDao::findById($recurso[2]);
             $data=json_encode($actuador);
@@ -120,17 +77,6 @@ class ControladorActuador extends ControladorPadre{
             );
         }
         
-        // $array=get_object_vars($dato);
-        
-
-        // if(ConciertoDAO::insert($dato)){
-        //     //ha ido todo bien
-        //     self::respuesta(
-        //         '',
-        //         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
-        //     );
-        // }
-        // //print_r($dato); 
    }
 }
 ?>
