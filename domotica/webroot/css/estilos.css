@@ -39,12 +39,14 @@ input[type=submit]#enviar:hover{
 header{
     display: flex;
     align-items: center;
+<<<<<<< HEAD
      background-color:#F7EFBE;
+=======
+    background-color:#e7d14358;
+>>>>>>> a9310c8 (xgf)
     border-bottom: #AC6238 1px solid;
-    justify-content: space-between;
-
-    border-bottom: #AC6238 1px solid;
-    justify-content: space-between;    flex-wrap: wrap;
+    justify-content: space-around; 
+    flex-wrap: wrap;
     
 
 }
@@ -52,16 +54,10 @@ header img{
     margin: 10px;
     margin-left: 50px;
     width: 50%;
-    flex: 50%;
+    /* flex: 50%; */
     
 }
-/*h1{
-    
-    margin: auto;
-    font-family: 'Allerta Stencil', sans-serif;
-    color: #AC6238;
-    -webkit-text-stroke: 1px #794223;
-}*/
+
 .letra{
     color: #E7D143;
 }
@@ -70,11 +66,11 @@ input[type=submit]#logout{
    background-repeat: no-repeat; 
    background-position: center;  
    background-size: 25px;
-
     padding: 20px;
     background-color: #e7d14300;
     border: none;
     margin-right: 1em;
+    
 }
 
 .boton{
