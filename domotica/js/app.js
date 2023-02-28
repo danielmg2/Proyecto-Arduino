@@ -1,9 +1,7 @@
-// ---- HUMEDAD ----
+// ---- PRIMER GRAF ----
 
-const chartHumedadCanva = document
-  .getElementById("chartHumedad")
-  .getContext("2d");
-const chartHumedad = new Chart(chartHumedadCanva, {
+const c1 = document.getElementById("chart1").getContext("2d");
+const chart1 = new Chart(c1, {
   type: "line",
   data: {
     labels: [
@@ -17,29 +15,29 @@ const chartHumedad = new Chart(chartHumedadCanva, {
     ],
     datasets: [
       {
-        label: "Anual",
+        label: "Temperatura",
         backgroundColor: "rgba(161, 198, 247, 0)",
-        borderColor: "rgb(47, 128, 237)",
+        borderColor: "#ff1a1a",
+        data: [2000, 4000, 2000, 5000, 8000, 9000, 2000],
+      },
+
+      {
+        label: "Humedad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#3399ff",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
 
       {
-        label: "Mensual",
+        label: "Personas",
         backgroundColor: "rgba(161, 198, 247, 0)",
-        borderColor: "rgb(47, 128, 237)",
-        data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
-      },
-
-      {
-        label: "Semanal",
-        backgroundColor: "rgba(161, 198, 247, 0)",
-        borderColor: "rgb(47, 128, 237)",
+        borderColor: "#1a1a1a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
       {
-        label: "Diario",
+        label: "Luminosidad",
         backgroundColor: "rgba(161, 198, 247, 0)",
-        borderColor: "rgb(47, 128, 237)",
+        borderColor: "#ffb31a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
     ],
@@ -59,10 +57,8 @@ const chartHumedad = new Chart(chartHumedadCanva, {
 
 // ---- TEMPERATURA ----
 
-const chartTemperaturaCanva = document
-  .getElementById("chartTemperatura")
-  .getContext("2d");
-const chartTemperatura = new Chart(chartTemperaturaCanva, {
+const c2 = document.getElementById("chart2").getContext("2d");
+const chart2 = new Chart(c2, {
   type: "line",
   data: {
     labels: [
@@ -76,29 +72,29 @@ const chartTemperatura = new Chart(chartTemperaturaCanva, {
     ],
     datasets: [
       {
-        label: "Anual",
-        backgroundColor: "rgba(211, 61, 29,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Temperatura",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ff1a1a",
+        data: [2000, 4000, 2000, 5000, 8000, 9000, 2000],
+      },
+
+      {
+        label: "Humedad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#3399ff",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
 
       {
-        label: "Mensual",
-        backgroundColor: "rgba(211, 61, 29,0)",
-        borderColor: "rgb(47, 128, 237)",
-        data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
-      },
-
-      {
-        label: "Semanal",
-        backgroundColor: "rgba(211, 61, 29,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Personas",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#1a1a1a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
       {
-        label: "Diario",
-        backgroundColor: "rgba(211, 61, 29,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Luminosidad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ffb31a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
     ],
@@ -118,10 +114,8 @@ const chartTemperatura = new Chart(chartTemperaturaCanva, {
 
 // ---- LUMINOSIDAD ----
 
-const chartLuminosidadCanva = document
-  .getElementById("chartLuminosidad")
-  .getContext("2d");
-const chartLuminosidad = new Chart(chartLuminosidadCanva, {
+const c3 = document.getElementById("chart3").getContext("2d");
+const chart3 = new Chart(c3, {
   type: "line",
   data: {
     labels: [
@@ -135,29 +129,29 @@ const chartLuminosidad = new Chart(chartLuminosidadCanva, {
     ],
     datasets: [
       {
-        label: "Anual",
-        backgroundColor: "rgba(226, 208, 50,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Temperatura",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ff1a1a",
+        data: [2000, 4000, 2000, 5000, 8000, 9000, 2000],
+      },
+
+      {
+        label: "Humedad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#3399ff",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
 
       {
-        label: "Mensual",
-        backgroundColor: "rgba(226, 208, 50,0)",
-        borderColor: "rgb(47, 128, 237)",
-        data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
-      },
-
-      {
-        label: "Semanal",
-        backgroundColor: "rgba(226, 208, 50,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Personas",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#1a1a1a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
       {
-        label: "Diario",
-        backgroundColor: "rgba(226, 208, 50,0)",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Luminosidad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ffb31a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
     ],
@@ -177,10 +171,8 @@ const chartLuminosidad = new Chart(chartLuminosidadCanva, {
 
 // ---- PERSONAS ----
 
-const chartPersonasCanva = document
-  .getElementById("chartPersonas")
-  .getContext("2d");
-const chartPersonas = new Chart(chartPersonasCanva, {
+const c4 = document.getElementById("chart4").getContext("2d");
+const chart4 = new Chart(c4, {
   type: "line",
   data: {
     labels: [
@@ -194,29 +186,29 @@ const chartPersonas = new Chart(chartPersonasCanva, {
     ],
     datasets: [
       {
-        label: "Anual",
-        backgroundColor: "black",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Temperatura",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ff1a1a",
+        data: [2000, 4000, 2000, 5000, 8000, 9000, 2000],
+      },
+
+      {
+        label: "Humedad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#3399ff",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
 
       {
-        label: "Mensual",
-        backgroundColor: "black",
-        borderColor: "rgb(47, 128, 237)",
-        data: [3000, 6000, 2000, 5000, 8000, 9000, 2000],
-      },
-
-      {
-        label: "Semanal",
-        backgroundColor: "black",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Personas",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#1a1a1a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
       {
-        label: "Diario",
-        backgroundColor: "black",
-        borderColor: "rgb(47, 128, 237)",
+        label: "Luminosidad",
+        backgroundColor: "rgba(161, 198, 247, 0)",
+        borderColor: "#ffb31a",
         data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
       },
     ],
