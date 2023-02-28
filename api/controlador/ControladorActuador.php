@@ -43,9 +43,12 @@ class ControladorActuador extends ControladorPadre{
                             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                         );
 
-            }
+            }//elseif(){
+
+            //}
         }elseif(count($recurso)==3){
 
+            if($recurso)
             $actuador= ActuadorDao::findById($recurso[2]);
             $data=json_encode($actuador);
             $last_error = json_last_error_msg();
