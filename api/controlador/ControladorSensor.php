@@ -19,16 +19,14 @@ class ControladorSensor extends ControladorPadre{
     }
     public function buscar(){
         $parametros= $this->parametros();
-        //Puede pasar: 1 o 2 
         $recurso= self::recurso();
 
-        //1.recurso -concietos y nada despues
         if (count($recurso)==2){
             //si solo hay conciertos devuelve dos, el de antes de la barra y el de espues
             if(!$parametros){
-                //Listar sin parametros
+                
                 $lista = SensorDao::findAll();
-                //print_r($lista);//tengo la lista en array, ahora debo mandar como JSON el recurso al cliente
+
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
@@ -45,27 +43,48 @@ class ControladorSensor extends ControladorPadre{
                         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                     );
     
-                }
+                }else{
+                 
+                     $lista = SensorDao::findById($recurso[2]);
+                     $datos = json_encode($lista);
+                     self::respuesta(
+                         $datos,
+                         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                     );
+                 }
             }
             
-        }elseif(count(self::recurso())==3){
-            //2.conciertos y despues id
-            //no tenemoms en cuenta los parametros poruqe se busca por id
-            if($recurso[2]=='personas'){
+        }elseif(count($recurso)==3){
 
-            }elseif($recurso[2]=='temperatura'){
-
-            }elseif($recurso[2]=='luminosidad'){
-
-            }elseif($recurso[2]=='humedad'){
-
-            }else{
+            if(is_int($recurso[2])){
                 $sensor= SensorDao::findById($recurso[2]);
                 $data=json_encode($sensor);
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
+            }else{
+
+                if(!$parametros){
+
+                    $sensor= SensorDao::findByRecurso($recurso[2]);
+                    $data=json_encode($sensor);
+                    self::respuesta(
+                        $data,
+                        array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                    );
+                }else{
+
+                    if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
+
+                        $sensor= SensorDao::findRecursoByDays($recurso[2],$_GET['fecha1'],$_GET['fecha2']);
+                        $data=json_encode($sensor);
+                        self::respuesta(
+                            $data,
+                            array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                        );                
+                    }
+                }
             }
             
         }

@@ -10,8 +10,7 @@ class ActuadorDao extends FactoryBD implements DAO{
         $datos = array();
         $devuelve = parent::ejecuta($sql,$datos);
         $arrayActuadores= array();
-        while($obj = $devuelve->fetchObject()){         
-            //$actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
+        while($obj = $devuelve->fetchObject()){    
             array_push($arrayActuadores,$obj); 
         }
         return $arrayActuadores;
@@ -45,15 +44,35 @@ class ActuadorDao extends FactoryBD implements DAO{
 
     public static function findByDays($fecha1,$fecha2){
 
-        // $fecha = date("Y-m-d 00:00:00");
-        // $fecha2 =date("Y-m-d 00:00:00",strtotime($fecha."+ ".$numDias." days")); //H:i:s
-
         $sql=" select * from actuador where fecha between ? and ?;";
         $datos = array($fecha1,$fecha2);
         $devuelve = parent::ejecuta($sql,$datos);
         $arrayActuadores= array();
         while($obj = $devuelve->fetchObject()){         
-            //$actuador = new Actuador($obj->id_actuador, $obj->id_arduino, $obj->actuador,$obj->mensaje, $obj->fecha);
+
+            array_push($arrayActuadores,$obj); 
+        }
+        return $arrayActuadores;
+    }
+    public static function findByRecurso($recurso){
+        $sql = 'select '.$recurso.',fecha from actuador;';
+        $datos = array();
+        $devuelve = parent::ejecuta($sql,$datos);
+        $obj = $devuelve->fetchObject();
+        if($obj){
+            return $obj;
+        }  
+        return null;
+    }
+
+    public static function findRecursoByDays($recurso,$fecha1,$fecha2){
+
+        $sql=" select ".$recurso." from actuador where fecha between ? and ?;";
+        $datos = array($fecha1,$fecha2);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arrayActuadores= array();
+        while($obj = $devuelve->fetchObject()){         
+           
             array_push($arrayActuadores,$obj); 
         }
         return $arrayActuadores;
