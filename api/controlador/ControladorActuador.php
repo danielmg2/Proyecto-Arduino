@@ -28,13 +28,14 @@ class ControladorActuador extends ControladorPadre{
             if(!$parametros){
 
                 $lista = ActuadorDao::findAll();
+
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
-
-            }elseif(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
+            }else{
+                if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
                     
                         $lista = ActuadorDao::findByDays($_GET['fecha1'],$_GET['fecha2']);
                         $datos = json_encode($lista);
@@ -43,12 +44,12 @@ class ControladorActuador extends ControladorPadre{
                             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                         );
 
-            }//elseif(){
+            }
+        }
 
-            //}
-        }elseif(count($recurso)==3){
+        }elseif(count(self::recurso())==3){
 
-            if($recurso)
+            if(is_int($recurso[2])){
             $actuador= ActuadorDao::findById($recurso[2]);
             $data=json_encode($actuador);
             $last_error = json_last_error_msg();
@@ -56,6 +57,26 @@ class ControladorActuador extends ControladorPadre{
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
+            }else{
+                if(!$parametros){
+                    $actuador = ActuadorDao::findByRecurso($recurso[2]);
+                    $data=json_decode($actuador);
+                    self::respuesta(
+                        $data,
+                        array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                    );
+                }else{
+                    if(isset($_GET['fecha1']) && isset($_GET['fecha2']) && count($_GET)==2){
+
+                        $actuador= ActuadorDao::findRecursoByDays($recurso[2],$_GET['fecha1'],$_GET['fecha2']);
+                        $data=json_encode($actuador);
+                        self::respuesta(
+                            $data,
+                            array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                        );                
+                    }
+                }
+            }
         }
     }
 
