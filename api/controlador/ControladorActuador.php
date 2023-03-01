@@ -43,23 +43,23 @@ class ControladorActuador extends ControladorPadre{
                             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                         );
 
+                }
             }
-        }
-
         }elseif(count(self::recurso())==3){
+            
+            if(is_int($recurso[2])){//me llega ""/actuador/idArduino
+                $actuador= ActuadorDao::findById($recurso[2]);
+                $data=json_encode($actuador);
 
-            if(is_int($recurso[2])){
-            $actuador= ActuadorDao::findById($recurso[2]);
-            $data=json_encode($actuador);
-            $last_error = json_last_error_msg();
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
-            }else{
+            }else{//me llega ""/actuador/ventilador...
+
                 if(!$parametros){
                     $actuador = ActuadorDao::findByRecurso($recurso[2]);
-                    $data=json_decode($actuador);
+                    $data=json_encode($actuador);
                     self::respuesta(
                         $data,
                         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
