@@ -9,7 +9,7 @@
     <title>Domotica en el Claudio</title>
     <link rel="stylesheet" href="./webroot/css/estilos.css">
 
-
+    <link rel="shortcut icon" href="./webroot/img/logo-removebg-preview.ico" type="image/x-icon">
 
     <!-- BOOTSTRAP -->
 
@@ -113,22 +113,28 @@
         require_once $_SESSION['vista'];
         ?>
     </main>
+    <?php
+    if(estaValidado()){
+        ?>
+            <footer class="text-center mt-5 p-4" id="pie">
 
-    <footer class="text-center mt-5 p-4" id="pie">
+            <div class= "container">
 
-    <div class= "container">
+                <div class="row">
+                
+                <div class="col-12 d-flex justify-content-center">
+                    © Copyright:&nbsp; &nbsp;
+                        <a  href="https://www.claudiomoyano.es/" id="enlaceFooter">   claudiomoyano.es</a>
+                    </div>
 
-        <div class="row">
-        
-        <div class="col-12 d-flex justify-content-center">
-            © Copyright:&nbsp; &nbsp;
-                <a  href="https://www.claudiomoyano.es/" id="enlaceFooter">   claudiomoyano.es</a>
+                </div>
             </div>
-    
-        </div>
-    </div>
 
-</footer>
+            </footer>
+
+        <?php
+    }
+    ?>
 </body>
 
 
