@@ -42,4 +42,11 @@
             </div>
         </div>
     </div>
+
+    <div class="d-flex justify-content-end m-2">
+        <form action="./index.php" method="POST" id="log">
+            <input type="submit" name="view" id="ver" value="Ver más">
+        </form>
+    </div>
+
 </div>
