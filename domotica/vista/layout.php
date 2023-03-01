@@ -114,6 +114,7 @@
         ?>
     </main>
     <?php
+
     if (estaValidado()) {
     ?>
         <footer class="text-center mt-5 p-4" id="pie">
@@ -133,6 +134,27 @@
         </footer>
 
     <?php
+
+    if(estaValidado()){
+        ?>
+            <footer class="text-center mt-5 p-4" id="pie">
+
+            <div class= "container">
+
+                <div class="row">
+                
+                <div class="col-12 d-flex justify-content-center">
+                    © Copyright:&nbsp; &nbsp;
+                        <a  href="https://www.claudiomoyano.es/" id="enlaceFooter">   claudiomoyano.es</a>
+                    </div>
+
+                </div>
+            </div>
+
+            </footer>
+
+        <?php
+
     }
     ?>
 </body>

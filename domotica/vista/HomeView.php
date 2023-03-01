@@ -38,19 +38,24 @@
                 <div class="card d-flex align-items-center">
                     <h2 class="card-title m-3" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;"> Diario </h2>
                     <canvas class="container h-75 w-75 " id="chart4"> </canvas>
+
                     <div>
 
 
 
                     </div>
+                  </div>
+              
                 </div>
+              
+              </div>
+              <div class="d-flex justify-content-end m-2">
+                <form action="./index.php" method="POST" id="log">
+                  <input type="submit" name="view" id="ver" value="Ver más">
+                </form>
+              </div>
 
-            </div>
 
-        </div>
-        <div class="d-flex justify-content-end m-2">
-            <form action="./index.php" method="POST" id="log">
-                <input type="submit" name="view" id="ver" value="Ver más">
-            </form>
-        </div>
-    </div>
+
+
+
