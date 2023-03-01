@@ -19,12 +19,10 @@ class ControladorActuador extends ControladorPadre{
     }
     public function buscar(){
         $parametros= $this->parametros();
-        //Puede pasar: 1 o 2 
         $recurso= self::recurso();
 
-        //1.recurso -concietos y nada despues
         if (count($recurso)==2){
-            //si solo hay conciertos devuelve dos, el de antes de la barra y el de espues
+            //si solo hay ""/actuador 
             if(!$parametros){
 
                 $lista = ActuadorDao::findAll();
@@ -44,23 +42,23 @@ class ControladorActuador extends ControladorPadre{
                             array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                         );
 
+                }
             }
-        }
-
         }elseif(count(self::recurso())==3){
+            
+            if(is_int($recurso[2])){//me llega ""/actuador/idArduino
+                $actuador= ActuadorDao::findById($recurso[2]);
+                $data=json_encode($actuador);
 
-            if(is_int($recurso[2])){
-            $actuador= ActuadorDao::findById($recurso[2]);
-            $data=json_encode($actuador);
-            $last_error = json_last_error_msg();
                 self::respuesta(
                     $data,
                     array('Content-Type: application/json', 'HTTP/1.1 200 OK')
                 );
-            }else{
+            }else{//me llega ""/actuador/ventilador...
+
                 if(!$parametros){
                     $actuador = ActuadorDao::findByRecurso($recurso[2]);
-                    $data=json_decode($actuador);
+                    $data=json_encode($actuador);
                     self::respuesta(
                         $data,
                         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
