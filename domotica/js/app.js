@@ -1,5 +1,4 @@
 // ---- ANUAL ----
-
 const c1 = document.getElementById("chart1").getContext("2d");
 const chart1 = new Chart(c1, {
   type: "line",
@@ -69,6 +68,14 @@ const chart1 = new Chart(c1, {
         },
       ],
     },
+    legend: {
+      labels: {
+        fontSize: 15,
+        fontColor: "black",
+        padding: 20,
+        usePointStyle: true,
+      },
+    },
   },
 });
 
@@ -117,6 +124,14 @@ const chart2 = new Chart(c2, {
           },
         },
       ],
+    },
+    legend: {
+      labels: {
+        fontSize: 15,
+        fontColor: "black",
+        padding: 20,
+        usePointStyle: true,
+      },
     },
   },
 });
@@ -175,6 +190,14 @@ const chart3 = new Chart(c3, {
         },
       ],
     },
+    legend: {
+      labels: {
+        fontSize: 15,
+        fontColor: "black",
+        padding: 20,
+        usePointStyle: true,
+      },
+    },
   },
 });
 
@@ -223,6 +246,14 @@ const chart4 = new Chart(c4, {
           },
         },
       ],
+    },
+    legend: {
+      labels: {
+        fontSize: 15,
+        fontColor: "black",
+        padding: 20,
+        usePointStyle: true,
+      },
     },
   },
 });

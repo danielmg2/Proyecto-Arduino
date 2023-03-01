@@ -62,13 +62,13 @@
 
 
     <header>
-        <a href="./index.php"><img src="./webroot/img/logo.png" alt="logo"></a>
+        <a href="./index.php?home=home"><img src="./webroot/img/logo.png" alt="logo"></a>
         <!--<h1><span class="letra"> D</span>omótica  <span class="letra">C</span>laudio</h1>-->
         <?
 
         if (estaValidado()) {
         ?>
-            <form action="./index.php" method="POST" id= "log">
+            <form action="./index.php" method="POST" id="log">
 
                 <input type="submit" name="logout" id="logout" value="">
             </form>
@@ -76,12 +76,12 @@
         }
         ?>
     </header>
-<?php
-    if(estaValidado()){
-?>
+    <?php
+    if (estaValidado()) {
+    ?>
 
         <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#F7EFBE; width:'100%'; ">
-          
+
             <div class="container-fluid">
                 <button class="navbar-toggler" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -93,17 +93,17 @@
                             <input type="submit" value="Arduino 2" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
                             <input type="submit" value="Arduino 3" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
                             <input type="submit" value="Arduino 4" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-    
+
                         </form>
                     </div>
                 </div>
             </div>
         </nav>
-        
-        <?php
+
+    <?php
     }
 
-?>
+    ?>
 
 
 
@@ -114,6 +114,27 @@
         ?>
     </main>
     <?php
+
+    if (estaValidado()) {
+    ?>
+        <footer class="text-center mt-5 p-4" id="pie">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12 d-flex justify-content-center">
+                        © Copyright:&nbsp; &nbsp;
+                        <a href="https://www.claudiomoyano.es/" id="enlaceFooter"> claudiomoyano.es</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+
+    <?php
+
     if(estaValidado()){
         ?>
             <footer class="text-center mt-5 p-4" id="pie">
@@ -133,6 +154,7 @@
             </footer>
 
         <?php
+
     }
     ?>
 </body>

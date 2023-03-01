@@ -18,6 +18,7 @@ require_once('./modelo/Usuario.php');
 $controladores = array(
     'login' => './controlador/LoginController.php',
     'home' => './controlador/HomeController.php'
+    // 'view' => './controlador/ViewController.php'
 );
 
 
@@ -25,5 +26,6 @@ $controladores = array(
 //vistas
 $vistas = array(
     'home' => 'HomeView.php',
-    'login' => 'LoginView.php'
+    'login' => 'LoginView.php',
+    'view' => 'ViewMore.php'
 );
