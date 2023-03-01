@@ -30,7 +30,7 @@ class ControladorSensor extends ControladorPadre{
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
-                    array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                    array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                 );
             }else{
            
@@ -40,7 +40,7 @@ class ControladorSensor extends ControladorPadre{
                     $datos = json_encode($lista);
                     self::respuesta(
                         $datos,
-                        array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                        array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                     );
     
                 }else{
@@ -49,7 +49,7 @@ class ControladorSensor extends ControladorPadre{
                      $datos = json_encode($lista);
                      self::respuesta(
                          $datos,
-                         array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                         array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                      );
                  }
             }
@@ -61,7 +61,7 @@ class ControladorSensor extends ControladorPadre{
                 $data=json_encode($sensor);
                 self::respuesta(
                     $data,
-                    array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                    array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                 );
             }else{
 
@@ -71,7 +71,7 @@ class ControladorSensor extends ControladorPadre{
                     $data=json_encode($sensor);
                     self::respuesta(
                         $data,
-                        array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                        array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                     );
                 }else{
 
@@ -81,7 +81,7 @@ class ControladorSensor extends ControladorPadre{
                         $data=json_encode($sensor);
                         self::respuesta(
                             $data,
-                            array('Content-Type: application/json', 'HTTP/1.1 200 OK')
+                            array('Content-Type: application/json', 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                         );                
                     }
                 }
@@ -100,7 +100,7 @@ class ControladorSensor extends ControladorPadre{
                 //ha ido todo bien
                 self::respuesta(
                     '',
-                    array('Content-Type: application/json', 'HTTP/1.1 201 Creado')
+                    array('Content-Type: application/json', 'HTTP/1.1 201 Creado', 'Access-Control-Allow-Origin: *','Access-Control-Allow-Credentials: true')
                 );
             }
 
