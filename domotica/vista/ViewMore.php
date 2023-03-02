@@ -5,7 +5,7 @@
     <form action="index.php">
 
         <div class="mb-3">
-            <h5>Por fecha</h5>
+            <h5>Por fecha:</h5>
         </div>
 
         <div class="mb-3 ms-5">
@@ -27,7 +27,7 @@
     <form action="index.php">
 
         <div class="mb-3">
-            <h5>Por Actuador</h5>
+            <h5>Por Actuador:</h5>
         </div>
 
         <div class="mb-3 ms-5">
