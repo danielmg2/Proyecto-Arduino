@@ -128,33 +128,35 @@ input[type="submit"]#logout {
   color: orange !important;
 }
 
-.confirmar {
+
+.confirmar{
   background-color: #e7d143 !important;
   border-radius: 5px;
   border: none;
-  padding: 10px;
+  padding: 5px;
 }
-.confirmar:hover {
+.confirmar:hover{
   background-color: #ac6238 !important;
 }
 
-h2,
-h5 {
-  color: #ac6238;
-  font-family: "Rubik";
+h2, h5{
+  color: #AC6238;
+  font-family: 'Rubik';
   font-weight: 700;
 }
 
-input[type="datetime-local"]:hover {
+input[type="datetime-local"]:hover{
   border-color: #e7d143;
 }
 
-#filtros {
+#filtros{
   box-shadow: 3px 3px 3px 3px #757373;
   border-radius: 5px;
+  
 }
 
-#actuador:hover {
+#actuador:hover{
+
   border-color: #e7d143;
 }
 

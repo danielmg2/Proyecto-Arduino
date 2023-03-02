@@ -2,6 +2,7 @@ window.addEventListener("load", async (event) => {
   //   console.log("carga");
 });
 
+
 export function ponerOyentes(){
   document.getElementById("1").addEventListener("click", (event) => {
     event.preventDefault();
@@ -17,4 +18,3 @@ export function ponerOyentes(){
     event.preventDefault();
   });
 }
-
