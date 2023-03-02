@@ -44,7 +44,7 @@
 
         <div class="d-flex justify-content-end m-2">
             <form action="./index.php" method="POST" id="log">
-                <input type="submit" name="view" id="ver" value="Ver más">
+                <input type="submit" name="view" id="ver" value="Ver más" class="confirmar">
             </form>
         </div>
     </div>

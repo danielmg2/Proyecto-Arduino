@@ -11,6 +11,7 @@ class ActuadorDao extends FactoryBD implements DAO{
         $devuelve = parent::ejecuta($sql,$datos);
         $arrayActuadores= array();
         while($obj = $devuelve->fetchObject()){    
+        while($obj = $devuelve->fetchObject()){    
             array_push($arrayActuadores,$obj); 
         }
         return $arrayActuadores;

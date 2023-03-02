@@ -89,11 +89,10 @@
                 <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
                         <form action="./index.php" method="post" id="menu">
-                            <input type="submit" value="Clase 522" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                            <input type="submit" value="Clase 144" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                            <input type="submit" value="Clase 320" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-                            <input type="submit" value="Clase 582" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-
+                            <input type="submit" id="1" value="Clase 522" name="arduino1" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" id="2" value="Clase 144" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" id="3" value="Clase 320" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
+                            <input type="submit" id="4" value="Clase 582" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
                         </form>
                     </div>
                 </div>
@@ -113,29 +112,29 @@
         require_once $_SESSION['vista'];
         ?>
     </main>
-    
-  
+
+
     <?php
 
-    if(estaValidado()){
-        ?>
-            <footer class="text-center mt-5 p-4" id="pie">
+    if (estaValidado()) {
+    ?>
+        <footer class="text-center mt-5 p-4" id="pie">
 
-            <div class= "container">
+            <div class="container">
 
                 <div class="row">
-                
-                <div class="col-12 d-flex justify-content-center">
-                    © Copyright:&nbsp; &nbsp;
-                        <a  href="https://www.claudiomoyano.es/" id="enlaceFooter">   claudiomoyano.es</a>
+
+                    <div class="col-12 d-flex justify-content-center">
+                        © Copyright:&nbsp; &nbsp;
+                        <a href="./" id="enlaceFooter"> domoticaClaudio.es </a>
                     </div>
 
                 </div>
             </div>
 
-            </footer>
+        </footer>
 
-        <?php
+    <?php
 
     }
     ?>
@@ -145,6 +144,6 @@
 <!-- CHARTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/peticiones.js"></script>
 </body>
-
 </html>
