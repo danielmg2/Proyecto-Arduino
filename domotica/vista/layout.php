@@ -93,7 +93,6 @@
                             <input type="submit" id="2" value="Clase 144" name="arduino2" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
                             <input type="submit" id="3" value="Clase 320" name="arduino3" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
                             <input type="submit" id="4" value="Clase 582" name="arduino4" class="nav-link boton" style="color: #AC6238;font-family: 'Rubik', sans-serif;font-weight: 500;">
-
                         </form>
                     </div>
                 </div>
@@ -147,5 +146,4 @@
 <script src="./js/app.js"></script>
 <script src="./js/peticiones.js"></script>
 </body>
-
 </html>
