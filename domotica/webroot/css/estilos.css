@@ -45,7 +45,7 @@ header {
 header img {
   margin: 10px;
   margin-left: 50px;
-  width: 50%;
+  width: 70% !important;
   /* flex: 50%; */
 }
 .letra {
