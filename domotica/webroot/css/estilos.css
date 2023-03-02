@@ -132,10 +132,35 @@ input[type=submit]#logout{
   color: orange !important;
 }
 
+.confirmar{
+  background-color: #e7d143 !important;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.confirmar:hover{
+  background-color: #ac6238 !important;
+}
 
+h2, h5{
+  color: #AC6238;
+  font-family: 'Rubik';
+  font-weight: 700;
+}
 
+input[type="datetime-local"]:hover{
+  border-color: #e7d143;
+}
 
+#filtros{
+  box-shadow: 3px 3px 3px 3px #757373;
+  border-radius: 5px;
+  
+}
 
+#actuador:hover{
+  border-color: #e7d143;
+}
 
 @media screen and (max-width: 1000px) {
   header img {
