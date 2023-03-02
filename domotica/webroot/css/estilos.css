@@ -1,4 +1,3 @@
-
 form#login {
   display: flex;
   flex-direction: column;
@@ -62,13 +61,13 @@ input[type="submit"]#logout {
   margin-right: 1em;
 }
 
-header{
-    display: flex;
-    align-items: center;
-     background-color:#F7EFBE;
-    border-bottom: #AC6238 1px solid;
-    justify-content: space-around; 
-    flex-wrap: wrap;
+header {
+  display: flex;
+  align-items: center;
+  background-color: #f7efbe;
+  border-bottom: #ac6238 1px solid;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .boton {
   background-color: #e7d14300;
@@ -85,28 +84,25 @@ header{
   display: flex;
   flex-direction: row;
 }
-header img{
-    margin: 10px;
-    margin-left: 50px;
-    width: 50%;
-    /* flex: 50%; */
-    
+header img {
+  margin: 10px;
+  margin-left: 50px;
+  width: 50%;
+  /* flex: 50%; */
 }
 
-.letra{
-    color: #E7D143;
+.letra {
+  color: #e7d143;
 }
-input[type=submit]#logout{
-   background-image: url('../iconos/icons8-salida-50.png');
-   background-repeat: no-repeat; 
-   background-position: center;  
-   background-size: 25px;
-    padding: 20px;
-    background-color: #e7d14300;
-    border: none;
-    margin-right: 1em;
-    
-
+input[type="submit"]#logout {
+  background-image: url("../iconos/icons8-salida-50.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  padding: 20px;
+  background-color: #e7d14300;
+  border: none;
+  margin-right: 1em;
 }
 #hamb {
   border: none;
@@ -132,33 +128,33 @@ input[type=submit]#logout{
   color: orange !important;
 }
 
-.confirmar{
+.confirmar {
   background-color: #e7d143 !important;
   border-radius: 5px;
   border: none;
-  padding: 5px;
+  padding: 10px;
 }
-.confirmar:hover{
+.confirmar:hover {
   background-color: #ac6238 !important;
 }
 
-h2, h5{
-  color: #AC6238;
-  font-family: 'Rubik';
+h2,
+h5 {
+  color: #ac6238;
+  font-family: "Rubik";
   font-weight: 700;
 }
 
-input[type="datetime-local"]:hover{
+input[type="datetime-local"]:hover {
   border-color: #e7d143;
 }
 
-#filtros{
+#filtros {
   box-shadow: 3px 3px 3px 3px #757373;
   border-radius: 5px;
-  
 }
 
-#actuador:hover{
+#actuador:hover {
   border-color: #e7d143;
 }
 
