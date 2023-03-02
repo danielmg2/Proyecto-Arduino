@@ -1,4 +1,19 @@
+import { ponerOyentes } from "./peticiones.js";
+
+let resultado=ponerOyentes();
+let temperaturas=[];
+let humedad=[];
+let luminosidad=[];
+let personas=[];
+
+resultado.foreach(elemen=>{
+  temperaturas.push(element.temperatura);
+  humedad.push(element.humedad);
+  luminosidad.push(element.luminosidad);
+  personas.push(element.personas);
+});
 // ---- ANUAL ----
+
 const c1 = document.getElementById("chart1").getContext("2d");
 const chart1 = new Chart(c1, {
   type: "line",
@@ -22,6 +37,7 @@ const chart1 = new Chart(c1, {
         label: "Temperatura",
         backgroundColor: "rgba(161, 198, 247, 0)",
         borderColor: "#ff1a1a",
+        //temperaturas,
         data: [
           2000, 4000, 2000, 5000, 8000, 9000, 2000, 9000, 2000, 9000, 2000,
           5000,
@@ -32,6 +48,7 @@ const chart1 = new Chart(c1, {
         label: "Humedad",
         backgroundColor: "rgba(161, 198, 247, 0)",
         borderColor: "#3399ff",
+        //humedad,
         data: [
           3000, 4000, 2000, 5000, 8000, 9000, 2000, 9000, 2000, 9000, 2000,
           5000,
@@ -42,6 +59,7 @@ const chart1 = new Chart(c1, {
         label: "Personas",
         backgroundColor: "rgba(161, 198, 247, 0)",
         borderColor: "#1a1a1a",
+        //personas,
         data: [
           3000, 4000, 2000, 5000, 8000, 9000, 2000, 9000, 2000, 9000, 2000,
           5000,
@@ -51,6 +69,7 @@ const chart1 = new Chart(c1, {
         label: "Luminosidad",
         backgroundColor: "rgba(161, 198, 247, 0)",
         borderColor: "#ffb31a",
+        //luminosidad,
         data: [
           3000, 4000, 2000, 5000, 8000, 9000, 2000, 9000, 2000, 9000, 2000,
           5000,

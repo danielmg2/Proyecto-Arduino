@@ -27,6 +27,7 @@ class ControladorActuador extends ControladorPadre{
 
                 $lista = ActuadorDao::findAll();
 
+
                 $data=json_encode($lista);
                 self::respuesta(
                     $data,
