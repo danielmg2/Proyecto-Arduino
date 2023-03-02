@@ -145,7 +145,7 @@
 <!-- CHARTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
-<script type="module" src="./js/app.js"></script>
-<script type="module" src="./js/peticiones.js"></script>
+<!-- <script type="module" src="./js/app.js"></script> -->
+<script  src="./js/peticiones.js" async></script>
 </body>
 </html>
