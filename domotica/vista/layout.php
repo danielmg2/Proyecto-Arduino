@@ -127,7 +127,7 @@
 
                     <div class="col-12 d-flex justify-content-center">
                         © Copyright:&nbsp; &nbsp;
-                        <a href="https://www.claudiomoyano.es/" id="enlaceFooter"> claudiomoyano.es</a>
+                        <a href="./" id="enlaceFooter"> domoticaClaudio.es </a>
                     </div>
 
                 </div>
