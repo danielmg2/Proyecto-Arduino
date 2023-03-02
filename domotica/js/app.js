@@ -1,17 +1,14 @@
-import { ponerOyentes } from "./peticiones.js";
+// let temperaturas=[];
+// let humedad=[];
+// let luminosidad=[];
+// let personas=[];
 
-let resultado=ponerOyentes();
-let temperaturas=[];
-let humedad=[];
-let luminosidad=[];
-let personas=[];
-
-resultado.foreach(elemen=>{
-  temperaturas.push(element.temperatura);
-  humedad.push(element.humedad);
-  luminosidad.push(element.luminosidad);
-  personas.push(element.personas);
-});
+// resultado.foreach(elemen=>{
+//   temperaturas.push(element.temperatura);
+//   humedad.push(element.humedad);
+//   luminosidad.push(element.luminosidad);
+//   personas.push(element.personas);
+// });
 // ---- ANUAL ----
 
 const c1 = document.getElementById("chart1").getContext("2d");
